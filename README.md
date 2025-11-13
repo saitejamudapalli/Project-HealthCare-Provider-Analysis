@@ -1,104 +1,119 @@
-🏥 Healthcare Provider Analysis Dashboard
+<h1 align="center">🏥 Healthcare Provider Analysis Dashboard</h1>
 
-This repository contains the code, configuration, and documentation for an interactive data analytics dashboard that visualizes and analyzes healthcare provider and patient data.
-The system is built to help healthcare professionals understand patient demographics, healthcare spending, and coverage insights using a clean, modern Streamlit interface powered by Pandas and Plotly.
+<p align="center">
+An interactive <b>Streamlit-based data analysis dashboard</b> designed to explore and visualize healthcare provider and patient data.  
+This project provides deep insights into <b>demographics</b>, <b>financial trends</b>, and <b>geographical distributions</b> — empowering analysts and healthcare professionals to make data-driven decisions.
+</p>
 
-📘 Table of Contents
+---
 
-Overview
+<h2>📘 Table of Contents</h2>
 
-Architecture
+<ul>
+  <li><a href="#overview">🩺 Overview</a></li>
+  <li><a href="#architecture">🧱 Architecture</a></li>
+  <li><a href="#features">✨ Dashboard Features</a></li>
+  <li><a href="#data-source">📈 Data Source</a></li>
+  <li><a href="#stack">🛠 Technology Stack</a></li>
+  <li><a href="#structure">📂 Project Structure</a></li>
+  <li><a href="#setup">⚙️ Setup and Deployment</a></li>
+  <li><a href="#sections">🧭 Dashboard Sections</a></li>
+  <li><a href="#enhancements">🚀 Future Enhancements</a></li>
+  <li><a href="#author">👤 Author</a></li>
+  <li><a href="#preview">📸 Dashboard Preview</a></li>
+</ul>
 
-Dashboard Features
+---
 
-Data Source
+<h2 id="overview">🩺 Overview</h2>
 
-Technology Stack
+<p>
+The <b>Healthcare Provider Analysis Dashboard</b> delivers an end-to-end visualization and data analysis solution that enables users to:
+</p>
 
-Project Structure
+<ul>
+  <li>📊 Explore demographic trends</li>
+  <li>💰 Analyze healthcare expenses and coverage</li>
+  <li>🌍 Understand geographic distribution</li>
+  <li>🔍 Identify correlations across multiple health indicators</li>
+</ul>
 
-Setup and Deployment
+<p>
+This project transforms cleaned and structured healthcare data into actionable insights through an intuitive and interactive interface.
+</p>
 
-Dashboard Sections
+---
 
-Home (Key Metrics)
+<h2 id="architecture">🧱 Architecture</h2>
 
-Demographics
+<pre>
++------------------+       +---------------------+       +------------------------+       +--------------------------+
+|   Raw Data       | --->  |   Data Cleaning     | --->  |   Processed (Silver)   | --->  |   Streamlit Dashboard     |
+|  (CSV / Source)  |       | (Nulls, Type Fixes) |       |   Dataset (CSV)        |       |   (Interactive UI)        |
++------------------+       +---------------------+       +------------------------+       +--------------------------+
+</pre>
 
-Financial Insights
+<ul>
+  <li><b>Raw Layer:</b> Original patient dataset from multiple sources.</li>
+  <li><b>Silver Layer:</b> Cleaned, standardized dataset (<code>PATIENTS_SILVER.csv</code>).</li>
+  <li><b>Dashboard Layer:</b> Visual analytics built with Streamlit and Plotly.</li>
+</ul>
 
-Geographic Distribution
+---
 
-Data Explorer
+<h2 id="features">✨ Dashboard Features</h2>
 
-Future Enhancements
+<ul>
+  <li>🎨 <b>Modern Streamlit Interface</b> – clean, intuitive, and responsive UI.</li>
+  <li>👩‍⚕️ <b>Demographics Insights</b> – analyze gender, race, age, and marital status patterns.</li>
+  <li>💰 <b>Financial Overview</b> – track expenses, coverage, and patient spending behavior.</li>
+  <li>🌍 <b>Geographic Visualization</b> – interactive location-based mapping of patients.</li>
+  <li>🔥 <b>Correlation Analysis</b> – visualize relationships among key health metrics.</li>
+  <li>⚡ <b>Optimized Performance</b> with caching and real-time rendering.</li>
+</ul>
 
-Author
+---
 
-🩺 Overview
+<h2 id="data-source">📈 Data Source</h2>
 
-The Healthcare Provider Analysis Dashboard provides an end-to-end data visualization solution for analyzing healthcare patient data.
-It enables analysts and administrators to:
+<table>
+  <tr><td><b>Dataset Name:</b></td><td>PATIENTS_SILVER.csv</td></tr>
+  <tr><td><b>Type:</b></td><td>Structured CSV file</td></tr>
+</table>
 
-Explore demographic patterns
+<p><b>Data Includes:</b></p>
+<ul>
+  <li>Patient demographic details</li>
+  <li>Financial data (expenses, coverage)</li>
+  <li>Geographic information (city, state, coordinates)</li>
+</ul>
 
-Compare financial statistics like coverage and expenses
+<p><b>Cleaning Steps:</b></p>
+<ul>
+  <li>Removed null or inconsistent entries</li>
+  <li>Converted date and numeric fields</li>
+  <li>Standardized column names and formats</li>
+</ul>
 
-Understand patient distribution by region
+---
 
-Identify healthcare trends and correlations
+<h2 id="stack">🛠 Technology Stack</h2>
 
-The dashboard combines cleaned datasets, processed through a data pipeline, and presents the results visually for intuitive exploration.
+<table>
+  <tr><th>Category</th><th>Tools / Libraries</th></tr>
+  <tr><td><b>Programming Language</b></td><td>Python</td></tr>
+  <tr><td><b>Framework</b></td><td>Streamlit</td></tr>
+  <tr><td><b>Data Handling</b></td><td>Pandas, NumPy</td></tr>
+  <tr><td><b>Visualization</b></td><td>Plotly Express</td></tr>
+  <tr><td><b>Version Control</b></td><td>Git, GitHub</td></tr>
+  <tr><td><b>Presentation</b></td><td>Microsoft PowerPoint (.pptx)</td></tr>
+</table>
 
-🧱 Architecture
+---
 
-The system follows a modular data pipeline + visualization approach.
+<h2 id="structure">📂 Project Structure</h2>
 
-+-----------------+       +---------------------+       +-------------------------+       +--------------------------+
-|   Raw Data      | --->  |   Data Cleaning     | --->  |   Processed (Silver)    | --->  |   Streamlit Dashboard    |
-| (CSV / Source)  |       | (Nulls, Types Fix)  |       |   Dataset (CSV)         |       |  (Interactive UI)        |
-+-----------------+       +---------------------+       +-------------------------+       +--------------------------+
-
-
-Raw Layer: Original patient dataset (CSV or API data source)
-
-Silver Layer: Cleaned and formatted dataset (PATIENTS_SILVER.csv)
-
-Dashboard Layer: Streamlit application for exploration and analysis
-
-📊 Dashboard Features
-
-Interactive Data Visualization using Streamlit and Plotly
-
-Demographics Analysis by gender, age, race, and marital status
-
-Financial Overview of healthcare expenses and coverage
-
-Geographic Mapping of patients by city/state
-
-Data Exploration Tab for correlation and numeric trend analysis
-
-Clean and Responsive UI for data storytelling
-
-📈 Data Source
-
-Source File: PATIENTS_SILVER.csv
-
-Type: Structured CSV dataset
-
-Content: Patient demographics, healthcare coverage, expenses, and location
-
-Cleaning: Null and missing values handled, data types standardized
-
-🛠 Technology Stack
-Category	Tools / Libraries
-Programming	Python
-Framework	Streamlit
-Data Processing	Pandas, NumPy
-Visualization	Plotly Express
-Version Control	Git, GitHub
-Presentation	PowerPoint (.pptx)
-📂 Project Structure
+<pre>
 Project-HealthCare-Provider-Analysis/
 │
 ├── app/
@@ -106,7 +121,7 @@ Project-HealthCare-Provider-Analysis/
 │   ├── Demographics.py
 │   ├── Financial.py
 │   ├── Geographic.py
-│   ├── DataExplorer.py
+│   └── DataExplorer.py
 │
 ├── data/
 │   └── PATIENTS_SILVER.csv
@@ -116,96 +131,127 @@ Project-HealthCare-Provider-Analysis/
 │
 ├── requirements.txt
 └── README.md
+</pre>
 
-⚙️ Setup and Deployment
+<p><b>Folder Descriptions:</b></p>
+<ul>
+  <li>🧩 <b>app/</b> → Streamlit page scripts (modular dashboard components)</li>
+  <li>📊 <b>data/</b> → Cleaned Silver Layer dataset</li>
+  <li>🧾 <b>docs/</b> → Presentation and project documentation</li>
+  <li>⚙️ <b>requirements.txt</b> → Python dependencies</li>
+</ul>
 
-Clone the Repository
+---
 
-git clone https://github.com/saitejamudapalli/Project-HealthCare-Provider-Analysis.git
-cd Project-HealthCare-Provider-Analysis
+<h2 id="setup">⚙️ Setup and Deployment</h2>
 
+<h3>🪜 Steps to Run Locally</h3>
 
-Install Dependencies
+<ol>
+  <li><b>Clone the Repository:</b>
+    <pre><code>git clone https://github.com/saitejamudapalli/Project-HealthCare-Provider-Analysis.git
+cd Project-HealthCare-Provider-Analysis</code></pre>
+  </li>
 
-pip install -r requirements.txt
+  <li><b>Install Dependencies:</b>
+    <pre><code>pip install -r requirements.txt</code></pre>
+  </li>
 
+  <li><b>Run the Dashboard:</b>
+    <pre><code>streamlit run Home.py</code></pre>
+  </li>
 
-Run the Streamlit App
+  <li><b>Open in Browser:</b>
+    <pre><code>http://localhost:8501</code></pre>
+  </li>
+</ol>
 
-streamlit run Home.py
+---
 
+<h2 id="sections">🧭 Dashboard Sections</h2>
 
-View in Browser
+<h3>🏠 Home (Key Metrics)</h3>
+<ul>
+  <li>👥 Total Patients</li>
+  <li>👨‍⚕️ Male vs Female Ratio</li>
+  <li>💸 Average Healthcare Expenses</li>
+  <li>💳 Average Healthcare Coverage</li>
+</ul>
 
-http://localhost:8501
+<h3>👩‍⚕️ Demographics</h3>
+<ul>
+  <li>🧍 Gender Distribution (Pie Chart)</li>
+  <li>🌈 Race Diversity (Bar Chart)</li>
+  <li>💍 Marital Status (Bar Chart)</li>
+  <li>🎂 Age Distribution (Histogram)</li>
+</ul>
 
-🏠 Dashboard Sections
-🏠 Home (Key Metrics)
+<h3>💰 Financial Insights</h3>
+<ul>
+  <li>📊 Expense Distribution (Histogram)</li>
+  <li>🔗 Coverage vs Expenses (Scatter Plot)</li>
+  <li>🧾 Average Expenses by Gender (Bar Chart)</li>
+</ul>
 
-Displays overall summary of the healthcare dataset:
+<h3>🌍 Geographic Distribution</h3>
+<ul>
+  <li>🗺️ City and State-wise Patient Distribution</li>
+  <li>💵 Expense and Coverage Visualization across Regions</li>
+</ul>
 
-Total number of patients
+<h3>🧮 Data Explorer</h3>
+<ul>
+  <li>🔥 Correlation Heatmap of numerical columns</li>
+  <li>📈 Identify relationships between key metrics</li>
+</ul>
 
-Male vs Female distribution
+---
 
-Average healthcare expenses
+<h2 id="enhancements">🚀 Future Enhancements</h2>
 
-Average coverage
+<ul>
+  <li>🔄 Real-time data integration via APIs</li>
+  <li>🤖 Predictive analytics for healthcare outcomes</li>
+  <li>🧠 Machine learning-based forecasting</li>
+  <li>☁️ Cloud deployment (Streamlit Cloud / AWS)</li>
+</ul>
 
-👩‍⚕️ Demographics
+---
 
-Visual insights into:
+<h2 id="author">👤 Author</h2>
 
-Gender distribution (Pie Chart)
+<p>
+👨‍💻 <b>Saiteja Mudapalli</b><br>
+📧 <i>mudapallisaiteja@gmail.com</i><br>
+🔗 <a href="https://github.com/saitejamudapalli" target="_blank">GitHub Profile</a>
+</p>
 
-Race and Marital Status breakdowns (Bar Charts)
+---
 
-Age Distribution histogram
+<h2 id="preview">📸 Dashboard Preview</h2>
 
-💰 Financial Insights
+<table>
+  <tr><th>Section</th><th>Preview</th></tr>
+  <tr><td>🏠 Home – Key Metrics</td><td><i><img width="1758" height="628" alt="home" src="https://github.com/user-attachments/assets/1b84b11e-c4c8-4e18-8306-793131f6b51c" />
+</i></td></tr>
+  <tr><td>👩‍⚕️ Demographics Overview</td><td><i><img width="1763" height="659" alt="Screenshot 2025-11-13 205831" src="https://github.com/user-attachments/assets/4c8bc9fc-e277-4866-834c-eba9d8051545" />
+<img width="1796" height="627" alt="Screenshot 2025-11-13 210005" src="https://github.com/user-attachments/assets/03976234-fb2c-4cf9-95df-02626a3b49e2" />
+<img width="1806" height="538" alt="Screenshot 2025-11-13 210023" src="https://github.com/user-attachments/assets/e693cce4-753e-41d3-8b20-3110cc265e24" />
+<img width="1760" height="637" alt="Screenshot 2025-11-13 210054" src="https://github.com/user-attachments/assets/be87cb44-1272-4cd8-9f71-b7a25f999526" />)</i></td></tr>
+  <tr><td>💰 Financial Insights</td><td><i><img width="1764" height="659" alt="Screenshot 2025-11-13 210555" src="https://github.com/user-attachments/assets/9e1e3a0d-8dc5-4b21-b6ed-6d1dfb8e8371" />
+<img width="1757" height="586" alt="Screenshot 2025-11-13 210617" src="https://github.com/user-attachments/assets/6efa00d9-9de2-41d6-8510-ca715f74084f" />
+<img width="1767" height="592" alt="Screenshot 2025-11-13 210635" src="https://github.com/user-attachments/assets/0c1747e0-63d0-46e8-97d1-364a47896b43" />
+</i></td></tr>
+  <tr><td>🌍 Geographic Distribution</td><td><i><img width="1759" height="623" alt="Screenshot 2025-11-13 211037" src="https://github.com/user-attachments/assets/bdcd3614-a7be-458b-9e45-0832c41b699a" />
+</i></td></tr>
+  <tr><td>🧮 Data Explorer (Heatmap)</td><td><i><img width="1745" height="835" alt="Screenshot 2025-11-13 211119" src="https://github.com/user-attachments/assets/255e4fdc-6ae5-4c40-a151-302e2411b8a8" />
+</i></td></tr>
+</table>
 
-Detailed financial analytics:
+<p align="center">
+🧭 Each section provides actionable insights into patient demographics, financial behavior, and healthcare accessibility.
+</p>
 
-Expense distribution
+---
 
-Coverage vs Expenses (Scatter Plot)
-
-Average spending comparison by gender
-
-🌍 Geographic Distribution
-
-Visualizes patient data on an interactive map:
-
-City/state-based distribution
-
-Expense trends across locations
-
-🧮 Data Explorer
-
-A powerful tab for analytical users:
-
-View correlation heatmaps
-
-Explore numerical relationships
-
-Perform deeper statistical analysis
-
-🔮 Future Enhancements
-
-Integration with real-time healthcare APIs
-
-Predictive modeling for patient outcomes
-
-Role-based dashboard access control
-
-Deployment on Streamlit Cloud / AWS / Azure
-
-👤 Author
-
-Saiteja Mudapalli
-📧 mudapallisaiteja@gmail.com
-🔗 [GitHub Profile](https://github.com/saitejamudapalli)
-
-📸 Dashboard Preview
-
-The above dashboard shows financial insights including expense distribution, coverage comparison, and average costs across genders.
+<h3 align="center">💡 Developed with ❤️ by <b>Saiteja Mudapalli</b></h3>
